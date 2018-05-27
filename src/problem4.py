@@ -52,11 +52,11 @@ class Pig(object):
         """
         Calls the   eat   method as many times as needed to make this Pig:
           -- eat 1 pound of slop, then
-          -- eat 2 pounds of slop, then
-          -- eat 3 pounds of slop, the
-          -- eat ... [4 pounds, then 5, then 6, then ... ]
-          -- eat 364 pounds of slop, then
-          -- eat 365 pounds of slop.
+          -- eat 2 more pounds of slop, then
+          -- eat 3 more pounds of slop, then
+          -- eat ... [4 more pounds, then 5 more, then 6 more, then ... ]
+          -- eat 364 more pounds of slop, then
+          -- eat 365 more pounds of slop.
         """
         # TODO: Implement and test this method.
 

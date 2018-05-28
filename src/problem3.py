@@ -93,12 +93,35 @@ def problem3(point, circle1, circle2, window):
       :type window:    rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
 
-    for k in range()
+    circle1.attach_to(window)
+    circle2.attach_to(window)
+    point.attach_to(window)
+    window.render()
+    list = [point,circle1.center,circle2.center]
+    list2 = []
+    for k in range(3):
+        if k == 2:
+            new_line = rg.Line(list[k],list[0])
+            list2 = list2 + [new_line.get_midpoint()]
+        else:
+            new_line = rg.Line(list[k],list[k+1])
+            list2 = list2 + [new_line.get_midpoint()]
+        new_line.color = circle1.fill_color
+        new_line.attach_to(window)
+        window.render(0.1)
 
+    for k in range(3):
+        if k == 2:
+            new_line = rg.Line(list2[k],list2[0])
+        else:
+            new_line = rg.Line(list2[k],list2[k+1])
+        new_line.color = circle2.fill_color
+        new_line.attach_to(window)
+        window.render(0.1)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
